@@ -96,7 +96,7 @@ const _addHandlerSubmitPassword = function () {
       ///send passwordArr[0] as new password with token
       const urlParams = new URLSearchParams(window.location.search);
       const token = urlParams.get("token");
-      const res = await fetch(`${BASE_URL}reset/password/send`, {
+      const res = await fetch(`${BASE_URL}user/reset/password/send`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
