@@ -1,0 +1,17 @@
+{
+  "name": "password-reset-days_counter",
+  "version": "1.0.0",
+  "description": "For resetting a user password with email on Days Counter website",
+  "type": "module",
+  "license": "ISC",
+  "author": "Lei-chan",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "dependencies": {
+    "core-js": "^3.45.1",
+    "parcel": "^2.15.4",
+    "regenerator-runtime": "^0.14.1"
+  }
+}

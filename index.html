@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Days Counter Password Reset</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" defer src="./src/index.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <p class="reset_password--warning hidden">Password is required</p>
+      <form class="reset_password--form">
+        <h2>~ Reset your password ~</h2>
+        <p class="reset_password--explanation">
+          Please enter your new password
+        </p>
+        <p class="password_explanation--tiny">
+          Use ? letters at minimam including more than ? uppercase, ? lowercase,
+          ? digit, and ? special character!
+        </p>
+        <div class="input_wrapper">
+          <input
+            id="reset_password--input_password"
+            type="password"
+            placeholder="your new password"
+            name="password_one"
+            value=""
+          />
+          <button class="btn--password_visibility" type="button"></button>
+          <button
+            class="btn--password_visibility btn_password_visibility--eye_off hidden"
+            type="button"
+          ></button>
+        </div>
+        <p>Please enter one more time</p>
+        <div class="input_wrapper">
+          <input
+            id="reset_password--input_password"
+            type="password"
+            placeholder="your new password"
+            name="password_two"
+            value=""
+          />
+          <button class="btn--password_visibility" type="button"></button>
+          <button
+            class="btn--password_visibility btn_password_visibility--eye_off hidden"
+            type="button"
+          ></button>
+        </div>
+        <button class="btn--send" type="submit">send</button>
+      </form>
+      <p class="disclaimer">※This form is only valid for 15 minutes</p>
+    </div>
+    <div class="spinner hidden"></div>
+    <p class="result_message hidden">
+      Password successfully updated!<br />Redirecting to the login page...
+    </p>
+  </body>
+</html>
