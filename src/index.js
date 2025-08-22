@@ -125,9 +125,14 @@ const _addHandlerSubmitPassword = function () {
         err.name === "ExpressValidatorError" ||
         err.name === "ValidationError"
       )
-        messageContainer._showMessage(err.message);
+        return messageContainer._showMessage(err.message);
 
-      resultMessage.innerHTML = `Server error 🙇‍♂️ Please try again! <br> Redirecitng to the password form page...`;
+      if (err.statusCode === 403)
+        resultMessage.innerHTML = `This page has expired.<br>Please send the password reset request<br>from the Days Counter login page again!`;
+
+      if (err.statusCode !== 403)
+        resultMessage.innerHTML = `Server error 🙇‍♂️ Please try again! <br> Redirecitng to the password form page...`;
+
       _openElement("resultMessage");
       await _promiseSetTimeout(3);
       _openElement("page");
