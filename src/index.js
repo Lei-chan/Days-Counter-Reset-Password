@@ -134,7 +134,8 @@ const _addHandlerSubmitPassword = function () {
         resultMessage.innerHTML = `Server error 🙇‍♂️ Please try again! <br> Redirecitng to the password form page...`;
 
       _openElement("resultMessage");
-      await _promiseSetTimeout(3);
+
+      if (err.statusCode !== 403) await _promiseSetTimeout(3);
       _openElement("page");
     }
   });
