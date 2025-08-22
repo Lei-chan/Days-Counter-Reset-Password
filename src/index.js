@@ -135,8 +135,10 @@ const _addHandlerSubmitPassword = function () {
 
       _openElement("resultMessage");
 
-      if (err.statusCode !== 403) await _promiseSetTimeout(3);
-      _openElement("page");
+      if (err.statusCode !== 403) {
+        await _promiseSetTimeout(3);
+        _openElement("page");
+      }
     }
   });
 };
