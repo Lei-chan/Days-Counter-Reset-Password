@@ -112,13 +112,11 @@ const _addHandlerSubmitPassword = function () {
         err.name = data.name || "";
         throw err;
       }
-      console.log(data);
 
       resultMessage.innerHTML = `Password successfully updated!<br />Redirecting to the login page...`;
       _openElement("resultMessage");
-      //removed for test
-      // await _promiseSetTimeout(3);
-      // window.location = CLIENT_URL;
+      await _promiseSetTimeout(3);
+      window.location = CLIENT_URL;
     } catch (err) {
       console.error(err);
       if (
