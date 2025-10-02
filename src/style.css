@@ -7,7 +7,8 @@
 }
 
 body {
-  background-image: url(./imgs/wallpaperDaytime.webp);
+  /* background-image: url(./imgs/wallpaperDaytime.webp); */
+  background-image: url(./imgs/wallpaper-fall.webp);
   background-size: cover;
   font-family: "Comic Relief", cursive;
   width: 100vw;
